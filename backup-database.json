@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "name": "1 TB Hard Drive 5.5'",
+      "price": 50.00,
+      "description": "great for gaming and video editing",
+      "image": "http://images.pcworld.com/news/graphics/169132-westerndigital-1tb-drive_original.jpg"
+    }, {
+      "name": "Galaxy Tablet",
+      "price": 500.00,
+      "description": "A huge tablet that can do anything. Play games or video and browse the internet.",
+      "image": "http://www.samsung.com/global/galaxy/galaxy-tab-s2/images/galaxy-tab-s2_gallery_front_black.png"
+    }
+  ]
+}
