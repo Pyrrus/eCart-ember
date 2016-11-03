@@ -19,10 +19,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav fixSpace">
         <li>{{#link-to 'admin'}}
-        admin
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
         {{/link-to}}</li>
         <li>{{#link-to 'cart'}}
-          cart
+          {{cart-size}}
         {{/link-to}}</li>
       </ul>
     </div><!-- /.navbar-collapse -->
