@@ -10,31 +10,17 @@
             {{model.description}}
           </p>
           <p>
+            {{great-deal model.price}} <br>
             ${{model.price}}
           </p>
           <p>
-            <button {{action 'addToCart' model}}>Add to Cart</button>
+            <button class="btn btn-success" {{action 'addToCart' model model.price}}>Add to Cart</button>
           </p>
         </div>
 
         <hr />
 
-        {{#each model.feedbacks as |feedback|}}
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <p>Rating: {{feedback.rating}}</p>
-              <br />
-              <p>{{feedback.details}}</p>
-            </div>
-            <div class="panel-footer">by {{feedback.user}}</div>
-          </div>
-          {{else}}
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <p>There are no reviews on the item</p>
-            </div>
-          </div>
-        {{/each}}
+        {{feedback-list feedbacks=model.feedbacks}}
 
         {{new-feedback saveFeedback="saveFeedback" item=model}}
     </div>

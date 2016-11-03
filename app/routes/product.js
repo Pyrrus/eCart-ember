@@ -17,8 +17,8 @@ export default Ember.Route.extend({
     deleteFeedback(comment) {
       comment.destroyRecord();
     },
-    addToCart(item) {
-      this.get('shoppingCart').add(item);
+    addToCart(item, cost) {
+      this.get('shoppingCart').add(item, cost);
     }
   }
 });

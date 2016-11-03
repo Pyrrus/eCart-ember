@@ -1,1 +1,40 @@
-{{outlet}}
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="item-image">
+        <h4>{{model.name}}</h4>
+        <img class="img-responsive" src="{{model.image}}">
+      </div>
+      <div class="model-description">
+        <p>
+          {{model.description}}
+        </p>
+        <p>
+          ${{model.price}}
+        </p>
+      </div>
+    </div>
+</div>
+
+
+<div class="form-div container">
+  <h3>Add a new item</h3>
+  <form>
+    <div class="form-group">
+      <label for="name">Item Name</label>
+      {{input class="form-control" value=model.name id="name"}}
+    </div>
+    <div class="form-group">
+      <label for="price">Item Price</label>
+      {{input class="form-control" value=model.price id="price"}}
+    </div>
+    <div class="form-group">
+      <label for="description">Item Description</label>
+      {{textarea class="form-control" value=model.description id="description"}}
+    </div>
+    <div class="form-group">
+      <label for="image">Item Image</label>
+      {{input class="form-control" value=model.image id="image"}}
+    </div>
+    <button class="btn btn-info" {{action 'update' model}}>Update</button>
+  </form>
+</div>

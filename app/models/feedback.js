@@ -4,5 +4,6 @@ export default DS.Model.extend({
 user: DS.attr(),
 rating: DS.attr(),
 details: DS.attr(),
+time: DS.attr(),
 item: DS.belongsTo('item', { async: true })
 });

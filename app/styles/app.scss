@@ -3,9 +3,33 @@
 
 .jumbotron {
   background: url('http://synergyestore.com/image/data/Slider/electronics-banner.jpg') no-repeat center;
+  margin-bottom: 0px;
+}
+
+.jumbotron-text {
+  color: #E38C2D !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 65%;
+  text-align: center;
 }
 
 .logo {
   max-width: 10%;
   height: auto;
+}
+
+
+.fixSpace {
+  margin-left: -190px;
+}
+
+@media (max-width: 767px) {
+  .fixSpace {
+    margin-left: 0px;
+  }
+}
+
+.item-image img {
+  width: 250px;
+  height: 250px;
 }

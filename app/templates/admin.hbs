@@ -1,1 +1,27 @@
-{{outlet}}
+<div class="container">
+  <div class="row">
+    {{#each model as |item|}}
+      <div class="col-md-4">
+        <div class="item-image">
+          <h4>{{item.name}}</h4>
+          {{#link-to 'edit' item.id}}<img class="img-responsive" src="{{item.image}}">{{/link-to}}
+          <button class="btn btn-danger" {{action 'remove' item}}>Remove</button>
+        </div>
+        <div class="item-description">
+          <p>
+            {{item.description}}
+          </p>
+          <p>
+            ${{item.price}}
+          </p>
+        </div>
+      </div>
+      {{else}}
+      Not found
+    {{/each}}
+  </div>
+  <br>
+  <div class="add-item-div">
+    {{new-item saveItem2="saveItem3"}}
+  </div>
+</div>

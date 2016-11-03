@@ -1,3 +1,26 @@
 {{#each shoppingCart.items as |item|}}
-  {{item.name}} -- {{item.price}}
+  <div class="shopping-cart-item">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{item.name}}</h3>
+      </div>
+      <div class="panel-body">
+        ${{item.price}} <br>
+        {{item.description}} <br>
+
+      </div>
+      <div class="panel-footer">
+        <button class="btn btn-danger" {{action "removeCart" item}}>remove</button>
+      </div>
+    </div>
+  </div>
 {{/each}}
+<br />
+<div class="panel panel-info total">
+  <div class="panel-heading">
+    <h3 class="panel-title">Total</h3>
+  </div>
+  <div class="panel-body">
+    ${{shoppingCart.price}}
+  </div>
+</div>

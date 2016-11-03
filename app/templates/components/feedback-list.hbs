@@ -1,0 +1,17 @@
+<button class="btn btn-info" {{action "high"}}>High to low</button> <button class="btn btn-info" {{action "low"}}>low to high</button> <br> <br>
+{{#each sortRating as |feedback|}}
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p>posted: {{moment-from-now feedback.time interval=1000}}</p>
+      <p>Rating: {{feedback.rating}}</p>
+      <p>comment: {{feedback.details}}</p>
+    </div>
+    <div class="panel-footer">by {{feedback.user}}</div>
+  </div>
+  {{else}}
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p>There are no reviews on the item</p>
+    </div>
+  </div>
+{{/each}}
