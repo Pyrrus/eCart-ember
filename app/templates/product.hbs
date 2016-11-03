@@ -13,7 +13,7 @@
             ${{model.price}}
           </p>
           <p>
-            <button>Add cart</button>
+            <button {{action 'addToCart' model}}>Add to Cart</button>
           </p>
         </div>
 
@@ -29,7 +29,11 @@
             <div class="panel-footer">by {{feedback.user}}</div>
           </div>
           {{else}}
-          not working
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p>There are no reviews on the item</p>
+            </div>
+          </div>
         {{/each}}
 
         {{new-feedback saveFeedback="saveFeedback" item=model}}
